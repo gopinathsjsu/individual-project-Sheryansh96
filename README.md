@@ -32,4 +32,4 @@ Both the SuccessMessage class and the ErrorMessage class implement the Output In
 
 ## Success Message:-
 
-![image1](/Screenshots/Inv1?raw=true "Optional Title")
+![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Inv1.png)
