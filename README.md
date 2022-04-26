@@ -31,23 +31,47 @@ Both the SuccessMessage class and the ErrorMessage class implement the Output In
 # Output Screenshot
 
 ## Success Message:-
+
+
 Inventory :-
+
+
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Inv1.png)
 
+
+
 Console log:-
+
+
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Console1.png)
 
+
+
 Output:-
+
+
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Output1.png)
+
+
 
 # Error Message when item is more that the stock quantity:-
 
 Inventory :-
+
+
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Inv2.png)
 
+
+
 Console log:-
+
+
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Console2.png)
 
+
+
 Output:-
+
+
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Output2.png)
 
