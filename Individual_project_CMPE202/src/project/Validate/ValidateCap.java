@@ -19,7 +19,7 @@ public class ValidateCap implements Validator{
 	}
 
 	@Override
-	public ArrayList<String> validate(HashMap<String, Integer> h, Database s) {
+	public HashMap<String,ArrayList<String>> validate(HashMap<String, Integer> h, Database s) {
 		// TODO Auto-generated method stub
 		//Database s = Database.getInstance();
 		Iterator it = h.entrySet().iterator();
@@ -29,7 +29,7 @@ public class ValidateCap implements Validator{
 		ArrayList<String> Essentials = new ArrayList<String>();
 		ArrayList<String> Luxury = new ArrayList<String>();
 		ArrayList<String> Misc = new ArrayList<String>();
-		
+		HashMap<String,ArrayList<String>> mp = new HashMap<String,ArrayList<String>>();
 		while(it.hasNext()) {
 			HashMap.Entry pair = (HashMap.Entry)it.next();
 			String category = s.getItemData().get(pair.getKey()).getCategoryname();
@@ -49,16 +49,20 @@ public class ValidateCap implements Validator{
 		
 		
 		if(s.getCategoryLimit("Essentials") < essential) {
-			return Essentials;
+			mp.put("2", Essentials);
+			return mp;
 		}
 		else if(s.getCategoryLimit("Luxury") < lux) {
-			return Luxury;
+			mp.put("2", Luxury);
+			return mp;
 		}
 		else if(s.getCategoryLimit("Misc") < misc) {
-			return Misc;
+			mp.put("2", Misc);
+			return mp;
 		}
 		else {
-			return new ArrayList<String>();
+			mp.put("2", new ArrayList<String>());
+			return mp;
 		}
 	}
 

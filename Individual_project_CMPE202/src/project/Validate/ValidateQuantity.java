@@ -19,11 +19,12 @@ public class ValidateQuantity implements Validator{
 	}
 	
 	@Override
-	public ArrayList<String> validate(HashMap<String,Integer> h, Database s) {
+	public HashMap<String,ArrayList<String>> validate(HashMap<String,Integer> h, Database s) {
 		// TODO Auto-generated method stub
 		//Database s = Database.getInstance();
 		Iterator it = h.entrySet().iterator();
 		ArrayList<String> item = new ArrayList<String>();
+		HashMap<String,ArrayList<String>> mp = new HashMap<String,ArrayList<String>>();
 		while(it.hasNext()) {
 			HashMap.Entry pair = (HashMap.Entry)it.next();
 	        Integer quantity = s.getItemData().get(pair.getKey()).getCurrentQuantity();
@@ -31,7 +32,13 @@ public class ValidateQuantity implements Validator{
 	        	item.add((String) pair.getKey() + " " + String.valueOf(pair.getValue()));
 	        }
 		}
-		return item;
+		if(item.size()>0) {
+			mp.put("1", item);
+			return mp;
+		}
+		else {
+			return nextValidator.validate(h, s);
+		}
 	}
 	
 	

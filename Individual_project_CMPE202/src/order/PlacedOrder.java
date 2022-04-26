@@ -37,22 +37,28 @@ public class PlacedOrder {
         }
         String finalOutput="";
         boolean goodTogo = true;
-        ArrayList<String> ans1 = new ArrayList<String>();
+        HashMap<String,ArrayList<String>> ans1 = new HashMap<String,ArrayList<String>> ();
         ArrayList<String> ans2 = new ArrayList<String>();
         ans1 = quantity.validate(BillOrder, s);
-        ans2 = stock.validate(BillOrder, s);
-        if(ans1.size()!=0){
-            finalOutput = "Quantity more than the storage amount. Please reduce the quantity for \n";
-            for (String num : ans1) { 	
-                finalOutput += num + "\n"; 		
-           }
-            goodTogo = false;
-        }else if(ans2.size()!=0){
-            finalOutput = "Quantity more than the cap amount. Please reduce quantity for \n";
-            for (String num : ans2) { 	
-                finalOutput += num + "\n"; 		
-           }
-            goodTogo = false;
+        Iterator it_ans1 = ans1.entrySet().iterator();
+        HashMap.Entry pair_ans1 = (HashMap.Entry)it_ans1.next();
+        String s1 = (String) pair_ans1.getKey();
+        ans2 = (ArrayList<String>) pair_ans1.getValue();
+        if(ans2.size()!=0){
+        	if(s1 == "1") {
+        		finalOutput = "Quantity more than the storage amount. Please reduce the quantity for \n";
+	            for (String num : ans2) { 	
+	                finalOutput += num + "\n"; 		
+	            }
+	            goodTogo = false;
+        	}
+	        else{
+	            finalOutput = "Quantity more than the cap amount. Please reduce quantity for \n";
+	            for (String num : ans2) { 	
+	                finalOutput += num + "\n"; 		
+	           }
+	            goodTogo = false;
+	        }
         }
         
         if(!goodTogo) {
