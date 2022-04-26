@@ -32,4 +32,4 @@ Both the SuccessMessage class and the ErrorMessage class implement the Output In
 
 ## Success Message:-
 
-!(/Screenshots/Inv1?raw=true "Optional Title")
+![image1](/Screenshots/Inv1?raw=true "Optional Title")
