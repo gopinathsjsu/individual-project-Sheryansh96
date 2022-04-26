@@ -33,3 +33,7 @@ Both the SuccessMessage class and the ErrorMessage class implement the Output In
 ## Success Message:-
 
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Inv1.png)
+
+![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Console1.png)
+
+![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Output1.png)
