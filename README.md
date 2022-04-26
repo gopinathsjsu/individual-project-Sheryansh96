@@ -75,3 +75,25 @@ Output:-
 
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Output2.png)
 
+
+# Error Message when Cap amount is exceeded:-
+
+Inventory :-
+
+
+![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Inv3.png)
+
+
+
+Console log:-
+
+
+![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Console2.png)
+
+
+
+Output:-
+
+
+![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Console3.png)
+
