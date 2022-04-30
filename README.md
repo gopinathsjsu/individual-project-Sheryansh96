@@ -18,6 +18,7 @@ Singleton Pattern comes under creational pattern as this pattern provides one of
 2) Chain of Responsibility:- 
 
 The chain of responsibility pattern creates a chain of receiver objects for a request. This pattern decouples sender and receiver of a request based on type of request. This pattern comes under behavioral patterns. Here in my implementation I have implemented the Chain of Responsibility pattern for the Validation of Quantity and Cap amount.
+
     a) I have created an interface Validator which will be implmented by ValidateQuantity and then ValidatedCap.
 
     b) If the processing of ValidateQuantity is successful then we move to ValidatedCap. If any error in ValidateQuantity it will return the error for that item and ask the user to reduce the quantity.
