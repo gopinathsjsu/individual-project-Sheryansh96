@@ -7,6 +7,7 @@ public class Database {
 	private static Database obj;
 	HashMap<String, Item> storageItem = new HashMap<String, Item>();
 	HashSet<String> storageCard = new HashSet<String>();
+	HashSet<String> things = new HashSet<String>();
 	HashMap<String, Integer> categoryLimit = new HashMap<String, Integer>();
 	private Database() {
 		
@@ -24,14 +25,14 @@ public class Database {
 		storageItem.put("Shampoo", new Item("Essentials", 200, 10));
 		storageItem.put("Milk", new Item("Essentials", 100, 5));
 		storageItem.put("Perfume", new Item("Luxury", 50, 50));
-		storageItem.put("chocolates", new Item("Luxury", 300, 3));
+		storageItem.put("Chocolates", new Item("Luxury", 300, 3));
 		storageItem.put("Handbag", new Item("Luxury", 75, 150));
 		storageItem.put("Wallet", new Item("Luxury", 100, 100));
 		storageItem.put("Bedsheet", new Item("Misc", 150, 75));
 		storageItem.put("Footware", new Item("Misc", 200, 25));
 		storageItem.put("HomeDecorPiece", new Item("Misc", 100, 40));
-		storageItem.put("Pen", new Item("Misc", 400, 3));
-		storageItem.put("Pencil", new Item("Misc", 400, 3));
+		storageItem.put("pen", new Item("Misc", 400, 3));
+		storageItem.put("pencil", new Item("Misc", 400, 3));
 	}
 	
 	void createCardDatabase(){
@@ -47,6 +48,22 @@ public class Database {
 		categoryLimit.put("Misc", 6);
 	}
 	
+	void setThings() {
+		things.add("Clothes");
+		things.add("Soap");
+		things.add("Shampoo");
+		things.add("Milk");
+		things.add("Perfume");
+		things.add("Chocolates");
+		things.add("Handbag");
+		things.add("Wallet");
+		things.add("Bedsheet");
+		things.add("Footware");
+		things.add("HomeDecorPiece");
+		things.add("pen");
+		things.add("pencil");
+	}
+	
 	
 	public HashMap<String, Item> getItemData() {
 		return storageItem;
@@ -54,6 +71,10 @@ public class Database {
 	
 	public HashSet<String> getCardData(){
 		return storageCard;
+	}
+	
+	public HashSet<String> getThings(){
+		return things;
 	}
 	
 	public void AddCard(String S) {

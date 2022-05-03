@@ -6,6 +6,7 @@ import java.util.*;
 import IO.IObasic;
 import project.Database;
 import project.Validate.ValidateCap;
+import project.Validate.ValidateItem;
 import project.Validate.ValidateQuantity;
 import project.Validate.Validator;
 
@@ -19,9 +20,11 @@ public class PlacedOrder {
         inputfile = this.inputOutput.getFileData();
         Double totalOrder = 0.0;
         StringBuilder sb = new StringBuilder();
+        Validator things = new ValidateItem();
         Validator quantity = new ValidateQuantity();
         Validator stock = new ValidateCap();
         
+        things.next(quantity);
         quantity.next(stock);
         
         HashMap<String, Integer> BillOrder = new HashMap<String, Integer>();
@@ -39,13 +42,20 @@ public class PlacedOrder {
         boolean goodTogo = true;
         HashMap<String,ArrayList<String>> ans1 = new HashMap<String,ArrayList<String>> ();
         ArrayList<String> ans2 = new ArrayList<String>();
-        ans1 = quantity.validate(BillOrder, s);
+        ans1 = things.validate(BillOrder, s);
         Iterator it_ans1 = ans1.entrySet().iterator();
         HashMap.Entry pair_ans1 = (HashMap.Entry)it_ans1.next();
         String s1 = (String) pair_ans1.getKey();
         ans2 = (ArrayList<String>) pair_ans1.getValue();
         if(ans2.size()!=0){
         	if(s1 == "1") {
+        		finalOutput = "Following items don't exist \n";
+	            for (String num : ans2) { 	
+	                finalOutput += num + "\n"; 		
+	            }
+	            goodTogo = false;
+        	}
+        	else if(s1 == "2") {
         		finalOutput = "Quantity more than the storage amount. Please reduce the quantity for \n";
 	            for (String num : ans2) { 	
 	                finalOutput += num + "\n"; 		
@@ -69,7 +79,8 @@ public class PlacedOrder {
         	Iterator<String> it_card = mp.iterator();
         	boolean hasCard = false;
         	while(it_card.hasNext()) {
-        		if(it_card.next() == carddetails) {
+        		String x = it_card.next();
+        		if(x.equals(carddetails)) {
         			hasCard = true;
         			break;
         		}

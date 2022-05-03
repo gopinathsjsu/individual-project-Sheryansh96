@@ -19,6 +19,7 @@ public class Billing {
 		db.createCardDatabase();
 		db.createItemDatabase();
 		db.setcategoryLimit();
+		db.setThings();
 		
 		IObasic inputOutput = new IObasic();
 		
@@ -29,27 +30,6 @@ public class Billing {
 	    
 	    PlacedOrder order = new PlacedOrder();
         order.generateBill(order_path, db);
-	}
-	
-	public void start() throws IOException {
-		
-		BufferedReader buffReader = new BufferedReader(new InputStreamReader(System.in));
-		
-		Database db = Database.getInstance();
-		db.createCardDatabase();
-		db.createItemDatabase();
-		db.setcategoryLimit();
-		
-		IObasic inputOutput = new IObasic();
-		
-		System.out.println("\nPlease enter File Path of Order File: ");
-		
-	    String order_path = buffReader.readLine();
-	    //inputOutput.readOrderpath(order_path);
-	    
-	    PlacedOrder order = new PlacedOrder();
-        order.generateBill(order_path, db);
-	    
 	}
 
 }
