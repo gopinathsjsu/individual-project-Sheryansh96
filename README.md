@@ -1,5 +1,12 @@
 # individual-project-Shreyansh
 
+To Run the code, Please 
+1) clone the code into a Folder.
+2) open Eclipse and select file 
+3) Select Open Project from file system
+4) Select the cloned file
+5) Procced to Start the program from Src->Project->Billing.java
+
 The program starts excecution from the Billing class which is inside src -> project.
 
 Upon running the user will have to enter the absolute path of the input file in the console.
