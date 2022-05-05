@@ -86,6 +86,7 @@ public class PlacedOrder {
         		}
         	}
         	if(!hasCard) {
+        		System.out.println("New Card Added");
         		s.AddCard(carddetails);
         	}
         	Iterator it_bill = BillOrder.entrySet().iterator();
