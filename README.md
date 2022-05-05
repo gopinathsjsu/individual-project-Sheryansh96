@@ -113,7 +113,7 @@ Output:-
 
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/Console3.png)
 
-# New Card Added
+# New Card Added Message Displayed and also added int the Database when user gives new card
 
 
 ![image1](https://github.com/gopinathsjsu/individual-project-Sheryansh96/blob/main/Screenshots/CardAdded.png)
